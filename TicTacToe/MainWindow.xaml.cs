@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 
@@ -42,33 +41,33 @@ namespace TicTacToe
               Ml = middle left   Mc = middle center   Mr = middle right
               Bl = bottom left   Bc = bottom center   Br = bottom right
             */
-            if (Tl.Content as String != "" && Ml.Content as String != "" && Bl.Content as String != "" &&
-                Tc.Content as String != "" && Mc.Content as String != "" && Bc.Content as String != "" &&
-                Tr.Content as String != "" && Mr.Content as String != "" && Br.Content as String != "")
+            if (Tl.Content as string != "" && Ml.Content as string != "" && Bl.Content as string != "" &&
+                Tc.Content as string != "" && Mc.Content as string != "" && Bc.Content as string != "" &&
+                Tr.Content as string != "" && Mr.Content as string != "" && Br.Content as string != "")
             {
                 L1.Content = "Tied";
                 WinnerFound();
             }
-            if (Tl.Content as String == "X" && Tc.Content as String == "X" && Tr.Content as String == "X" ||
-                Ml.Content as String == "X" && Mc.Content as String == "X" && Mr.Content as String == "X" ||
-                Bl.Content as String == "X" && Bc.Content as String == "X" && Br.Content as String == "X" ||
-                Tl.Content as String == "X" && Ml.Content as String == "X" && Bl.Content as String == "X" ||
-                Tc.Content as String == "X" && Mc.Content as String == "X" && Bc.Content as String == "X" ||
-                Tr.Content as String == "X" && Mr.Content as String == "X" && Br.Content as String == "X" ||
-                Tl.Content as String == "X" && Mc.Content as String == "X" && Br.Content as String == "X" ||
-                Bl.Content as String == "X" && Mc.Content as String == "X" && Tr.Content as String == "X")
+            if (Tl.Content as string == "X" && Tc.Content as string == "X" && Tr.Content as string == "X" ||
+                Ml.Content as string == "X" && Mc.Content as string == "X" && Mr.Content as string == "X" ||
+                Bl.Content as string == "X" && Bc.Content as string == "X" && Br.Content as string == "X" ||
+                Tl.Content as string == "X" && Ml.Content as string == "X" && Bl.Content as string == "X" ||
+                Tc.Content as string == "X" && Mc.Content as string == "X" && Bc.Content as string == "X" ||
+                Tr.Content as string == "X" && Mr.Content as string == "X" && Br.Content as string == "X" ||
+                Tl.Content as string == "X" && Mc.Content as string == "X" && Br.Content as string == "X" ||
+                Bl.Content as string == "X" && Mc.Content as string == "X" && Tr.Content as string == "X")
             {
                 L1.Content = "Player X wins";
                 WinnerFound();
             }
-            if (Tl.Content as String == "O" && Tc.Content as String == "O" && Tr.Content as String == "O" ||
-                Ml.Content as String == "O" && Mc.Content as String == "O" && Mr.Content as String == "O" ||
-                Bl.Content as String == "O" && Bc.Content as String == "O" && Br.Content as String == "O" ||
-                Tl.Content as String == "O" && Ml.Content as String == "O" && Bl.Content as String == "O" ||
-                Tc.Content as String == "O" && Mc.Content as String == "O" && Bc.Content as String == "O" ||
-                Tr.Content as String == "O" && Mr.Content as String == "O" && Br.Content as String == "O" ||
-                Tl.Content as String == "O" && Mc.Content as String == "O" && Br.Content as String == "O" ||
-                Bl.Content as String == "O" && Mc.Content as String == "O" && Tr.Content as String == "O")
+            if (Tl.Content as string == "O" && Tc.Content as string == "O" && Tr.Content as string == "O" ||
+                Ml.Content as string == "O" && Mc.Content as string == "O" && Mr.Content as string == "O" ||
+                Bl.Content as string == "O" && Bc.Content as string == "O" && Br.Content as string == "O" ||
+                Tl.Content as string == "O" && Ml.Content as string == "O" && Bl.Content as string == "O" ||
+                Tc.Content as string == "O" && Mc.Content as string == "O" && Bc.Content as string == "O" ||
+                Tr.Content as string == "O" && Mr.Content as string == "O" && Br.Content as string == "O" ||
+                Tl.Content as string == "O" && Mc.Content as string == "O" && Br.Content as string == "O" ||
+                Bl.Content as string == "O" && Mc.Content as string == "O" && Tr.Content as string == "O")
             {
                 L1.Content = "Player O wins";
                 WinnerFound();
@@ -91,8 +90,8 @@ namespace TicTacToe
             {
                 button.IsEnabled = true;
                 button.Content = "";
-                L1.Content = $"Current player is {_currentPlayer}";
             }
+            L1.Content = $"Current player is {_currentPlayer}";
         }
     }
 }
